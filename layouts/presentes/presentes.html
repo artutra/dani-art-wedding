@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="/main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+</head>
+<body>
+    <div>
+        <h2>
+            {{ range where (site.Pages.ByParam "price") "Params.type" "category" }}
+                <a class=" font-bold text-blue-600 hover:text-black" href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ end }}
+        </h2>
+    </div>
+
+    <section id="asc" class="">
+
+        {{ range where (site.Pages.ByParam "price") "Params.type" "gift" }}
+            <div>
+                <h3>{{ .Title }}</h3>
+                <span>R${{ .Params.Price }}</span>
+                <a href="{{ .Permalink  }}">Detalhes</a>
+                <button href="{{ .Params.checkout_url }}" type="button">Quero dar este presente!</button>
+            </div>
+        {{ end }}
+
+    </section>
+
+    <section id="desc" class="">
+
+        {{ range where (.Pages.ByParam "price").Reverse "Params.type" "gift" }}
+            <div>
+                <h3>{{ .Title }}</h3>
+                <span>R${{ .Params.Price }}</span>
+                <a href="{{ .Permalink  }}">Detalhes</a>
+                <button href="{{ .Params.checkout_url }}" type="button">Quero dar este presente!</button>
+            </div>
+        {{ end }}
+
+    </section>
+
+    <script src="/paramsEvaluate.js"></script>
+</body>
+</html>
