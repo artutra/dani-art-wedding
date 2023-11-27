@@ -6,27 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
 </head>
-<body>
-    <section id="asc" class="">
+<body class="py-12">
 
-        {{ range where (site.Pages.ByParam "price") "Params.category" "viagem"}}
-        <div>
-            <h3>{{ .Title }}</h3>
-            <span>R${{ .Params.Price }}</span>
-            <a href="{{ .Permalink  }}">Detalhes</a>
-            <button href="{{ .Params.checkout_url }}" type="button">Quero dar este presente!</button>
-        </div>
+    <div class="flex flex-row justify-center gap-3 my-6">
+        {{ range where (site.Pages.ByParam "price") "Params.type" "category" }}
+            <a class="font-bold text-terracotta hover:text-secondary active:text-moss" href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ end }}
+    </div>
+
+    <section id="asc" class="flex flex-col px-2 gap-12 items-center">
+
+        {{ range where (site.Pages.ByParam "price") "Params.category" "viagem" }}
+            <div class="flex flex-col items-center gap-3 px-9 py-7 border-solid border-moss border font-poppins rounded-md">
+                <img src="{{ .Params.image_url }}" class="w-1/2">
+                <h3 class="font-bold text-moss mt-10">{{ .Title }}</h3>
+                <span class="text-moss">R${{ .Params.Price }}</span>
+                <a href="{{ .Permalink  }}" class="text-moss mt-2">Detalhes</a>
+                <button href="{{ .Params.checkout_url }}" type="button" class="mt-6 border-solid border-terracotta border py-2 px-3 rounded-2xl text-terracotta" >Presentear noivos</button>
+            </div>
         {{ end }}
     </section>
 
-    <section id="desc" class="">
-        {{ range where (site.Pages.ByParam "price").Reverse "Params.category" "cozinha"}}
-        <div>
-            <h3>{{ .Title }}</h3>
-            <span>R${{ .Params.Price }}</span>
-            <a href="{{ .Permalink  }}">Detalhes</a>
-            <button href="{{ .Params.checkout_url }}" type="button">Quero dar este presente!</button>
-        </div>
+    <section id="desc" class="flex flex-col px-2 gap-12 items-center">
+        {{ range where (site.Pages.ByParam "price").Reverse "Params.category" "viagem" }}
+            <div class="flex flex-col items-center gap-3 px-9 py-7 border-solid border-moss border font-poppins rounded-md">
+                <img src="{{ .Params.image_url }}" class="w-1/2">
+                <h3 class="font-bold text-moss mt-10">{{ .Title }}</h3>
+                <span class="text-moss">R${{ .Params.Price }}</span>
+                <a href="{{ .Permalink  }}" class="text-moss mt-2">Detalhes</a>
+                <button href="{{ .Params.checkout_url }}" type="button" class="mt-6 border-solid border-terracotta border py-2 px-3 rounded-2xl text-terracotta" >Presentear noivos</button>
+            </div>
         {{ end }}
     </section>
 
