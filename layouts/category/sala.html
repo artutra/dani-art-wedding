@@ -14,11 +14,11 @@
         {{ end }}
     </div>
 
-    <section id="asc" class="flex flex-col px-2 gap-12 items-center">
+    <section id="asc" class="flex flex-col lg:flex-row lg:flex-wrap px-2 gap-12 items-center lg:px-44">
 
         {{ range where (site.Pages.ByParam "price") "Params.category" "sala" }}
             <div class="flex flex-col items-center gap-3 px-9 py-7 border-solid border-moss border font-poppins rounded-md">
-                <img src="{{ .Params.image_url }}" class="w-1/2">
+                <img src="{{ .Params.image_url }}" class="w-1/2 lg:w-44">
                 <h3 class="font-bold text-moss mt-10">{{ .Title }}</h3>
                 <span class="text-moss">R${{ .Params.Price }}</span>
                 <a href="{{ .Permalink  }}" class="text-moss mt-2">Detalhes</a>
@@ -27,10 +27,10 @@
         {{ end }}
     </section>
 
-    <section id="desc" class="flex flex-col px-2 gap-12 items-center">
+    <section id="desc" class="flex flex-col lg:flex-row lg:flex-wrap px-2 gap-12 items-center lg:px-44">
         {{ range where (site.Pages.ByParam "price").Reverse "Params.category" "sala" }}
             <div class="flex flex-col items-center gap-3 px-9 py-7 border-solid border-moss border font-poppins rounded-md">
-                <img src="{{ .Params.image_url }}" class="w-1/2">
+                <img src="{{ .Params.image_url }}" class="w-1/2 lg:w-44">
                 <h3 class="font-bold text-moss mt-10">{{ .Title }}</h3>
                 <span class="text-moss">R${{ .Params.Price }}</span>
                 <a href="{{ .Permalink  }}" class="text-moss mt-2">Detalhes</a>
