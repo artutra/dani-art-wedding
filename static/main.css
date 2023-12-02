@@ -554,10 +554,6 @@ video {
   height: auto;
 }
 
-.w-1\/2{
-  width: 50%;
-}
-
 .w-\[440px\]{
   width: 440px;
 }
@@ -568,10 +564,6 @@ video {
 
 .w-full{
   width: 100%;
-}
-
-.flex-auto{
-  flex: 1 1 auto;
 }
 
 .flex-row{
@@ -600,10 +592,6 @@ video {
 
 .gap-24{
   gap: 6rem;
-}
-
-.gap-28{
-  gap: 7rem;
 }
 
 .gap-6{
@@ -651,11 +639,6 @@ video {
   padding-right: 0.5rem;
 }
 
-.px-44{
-  padding-left: 11rem;
-  padding-right: 11rem;
-}
-
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -687,19 +670,9 @@ video {
   font-family: Poppins, sans-serif;
 }
 
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-6xl{
-  font-size: 3.75rem;
-  line-height: 1;
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-base{
@@ -710,11 +683,6 @@ video {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-bold{
@@ -754,10 +722,6 @@ video {
     flex-direction: row;
   }
 
-  .lg\:gap-24{
-    gap: 6rem;
-  }
-
   .lg\:gap-2{
     gap: 0.5rem;
   }
@@ -771,17 +735,13 @@ video {
     padding-right: 11rem;
   }
 
-  .lg\:pb-12{
-    padding-bottom: 3rem;
-  }
-
   .lg\:pt-12{
     padding-top: 3rem;
   }
 
-  .lg\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:text-3xl{
@@ -789,9 +749,9 @@ video {
     line-height: 2.25rem;
   }
 
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .lg\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .lg\:text-xl{
