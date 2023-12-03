@@ -8,10 +8,9 @@
 </head>
 <body class="pb-12">
     <section class="flex flex-col items-center">
-        <div class="flex flex-col w-full bg-secondary px-2 pt-12 pb-12 lg:px-44">
-            <h2 class="font-italiana text-primary lg:text-6xl text-4xl">Artur e Danielle</h2>
-            <h2 class="font-poppins lg:text-3xl text-xl text-primary"><span class="font-bold">09/02/24 </span><span id="countdown">(faltam X dias)</span></h2>
-        </div>
+        
+        {{ partial "header.html" . }}
+
         <div class="flex flex-col px-2 items-center gap-24 my-12 lg:px-44">
             <div class="flex flex-col gap-3 items-center">
                 <h1 class="font-italiana text-moss lg:text-6xl text-4xl">Lista de presentes</h1>
