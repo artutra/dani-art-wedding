@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
 </head>
-<body>
+<body class="py-10 px-2">
 
-        <div>
-            <h3>{{ .Title }}</h3>
-            <span>R${{ .Params.Price }}</span>
+        <div class="flex flex-col items-center gap-6 lg:px-96">
+            <h3 class="font-italiana lg:text-6xl text-4xl text-moss">{{ .Title }}</h3>
+            <img src="{{ .Params.image_url }}" class="w-1/2 lg:w-44"/>
+            <span class="text-moss text-2xl">R${{ .Params.Price }}</span>
             <p>{{ .Content }}</p>
-            <button href="{{ .Params.checkout_url }}" type="button">Quero dar este presente!</button>
+            <button href="{{ .Params.checkout_url }}" type="button" class="border-solid border-terracotta hover:bg-terracotta border py-2 px-3 rounded-2xl text-terracotta hover:text-primary">Quero dar este presente!</button>
         </div>
+
 </body>
 </html>
