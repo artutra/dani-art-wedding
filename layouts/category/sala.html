@@ -8,11 +8,7 @@
 </head>
 <body class="py-12">
 
-    <div class="flex flex-row justify-center gap-3 my-6">
-        {{ range where (site.Pages.ByParam "price") "Params.type" "category" }}
-            <a class="font-bold text-terracotta hover:text-secondary active:text-moss" href="{{ .Permalink }}">{{ .Title }}</a>
-        {{ end }}
-    </div>
+    {{ partial "nav_menu.html" . }}
 
     <section id="asc" class="flex flex-col lg:flex-row lg:flex-wrap px-2 gap-12 items-center lg:px-44">
 
