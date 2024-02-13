@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
 </head>
-<body class="py-12">
+<body class="pb-12">
 
-    <div class="flex flex-row justify-center gap-3 my-6">
-        {{ range where (site.Pages.ByParam "price") "Params.type" "category" }}
-            <a class="font-bold text-terracotta hover:text-secondary active:text-moss" href="{{ .Permalink }}">{{ .Title }}</a>
-        {{ end }}
+    {{ partial "header.html" . }}
+
+    <div class="flex justify-center mt-12">
+        <h1 class="font-italiana text-moss lg:text-6xl text-4xl">{{ .Title }}</h1>
     </div>
+
+    {{ partial "nav_menu.html" . }}
 
     <section id="asc" class="flex flex-col lg:flex-row lg:flex-wrap px-2 gap-12 items-center lg:px-44">
 
@@ -39,6 +41,6 @@
         {{ end }}
     </section>
 
-    <script src="/paramsEvaluate.js"></script>
+    <script src="/paramsSort.js"></script>
 </body>
 </html>
